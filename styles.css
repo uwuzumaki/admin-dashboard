@@ -1,0 +1,52 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: grey;
+}
+
+.container {
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(5, 1fr);
+  height: 100%;
+}
+
+.header {
+  grid-area: 1 / 2 / 2 / -1;
+}
+
+.sidebar {
+  grid-area: 1 / 1 / -1 / 2;
+  background-color: seagreen;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 10% 40% 50%;
+}
+
+.logo {
+  grid-row: 1;
+}
+
+.upper {
+  display: flex;
+  flex-direction: column;
+}
+
+.upper li {
+  grid-row: 2 /3;
+  width: 100%;
+  padding: 5px 0 5px 30px;
+}
+
+.lower li {
+  grid-row: 3/4;
+  width: 100%;
+  padding: 5px 0 5px 30px;
+}
